@@ -1,4 +1,5 @@
-import { Search } from '@mui/icons-material'
+import { Search, ShoppingCartOutlined } from '@mui/icons-material'
+import { Badge } from '@mui/material'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -36,9 +37,23 @@ const Input = styled.input`
 `
 const Center = styled.div`
     flex: 1;
+    text-align: center;
+`
+
+const Logo = styled.h1`
+    font-weight: bold;
 `
 const Right = styled.div`
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 25px;
+`
+
+const MenuItem = styled.div`
+    font-size: 14px;
+    cursor: pointer;
 `
 
 function Navbar() {
@@ -52,8 +67,16 @@ function Navbar() {
                     <Search />
                 </SearchContainer>
             </Left>
-            <Center>Center</Center>
-            <Right>Right</Right>
+            <Center><Logo>Lune.</Logo></Center>
+            <Right>
+                <MenuItem>REGISTER</MenuItem>
+                <MenuItem>SIGN IN</MenuItem>
+                <MenuItem>
+                    <Badge badgeContent={4} color="secondary">
+                        <ShoppingCartOutlined  />
+                    </Badge>
+                </MenuItem>
+            </Right>
 
         </Wrapper>
     </Container>
