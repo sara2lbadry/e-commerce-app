@@ -30,6 +30,7 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
+    transform: translateX(-100vw);
 `
 const Slide = styled.div`
     display: flex;
@@ -66,9 +67,12 @@ const Button = styled.button`
 `
 
 function Slider() {
+    const handleClick = (direction) => {
+
+    }
   return (
     <Container>
-        <Arrow direction = 'left'>
+        <Arrow direction = 'left' onClick={() => handleClick('left')}>
             <KeyboardArrowLeftOutlined />
         </Arrow>
         <Wrapper>
@@ -105,7 +109,7 @@ function Slider() {
                 </InfoContainer>
             </Slide>
         </Wrapper>
-        <Arrow direction = 'right'>
+        <Arrow direction = 'right' onClick={() => handleClick('right')}>
             <KeyboardArrowRightOutlined />
         </Arrow>
         
