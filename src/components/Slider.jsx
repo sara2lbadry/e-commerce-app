@@ -1,6 +1,7 @@
 import { KeyboardArrowLeftOutlined, KeyboardArrowRightOutlined } from "@mui/icons-material"
+import { useState } from "react"
 import styled from "styled-components"
-import Shopping from '../assets/shopping.png'
+import {sliderItems} from '../data'
 
 const Container = styled.div`
     width: 100%;
@@ -26,11 +27,12 @@ const Arrow = styled.div`
     margin: auto;
     cursor: pointer;
     opacity: 0.7;
+    z-index: 2;
 `
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    transform: translateX(-100vw);
+    transform: translateX(0vw);
 `
 const Slide = styled.div`
     display: flex;
@@ -67,6 +69,7 @@ const Button = styled.button`
 `
 
 function Slider() {
+    const [slideInex, setSlideIndex] = useState(0)
     const handleClick = (direction) => {
 
     }
@@ -76,38 +79,21 @@ function Slider() {
             <KeyboardArrowLeftOutlined />
         </Arrow>
         <Wrapper>
-            <Slide bg='f5fafd'>
-                <ImgContainer>
-                    <Image src={Shopping}/>
-                </ImgContainer>
-                <InfoContainer>
-                    <Title>Summer Sale</Title>
-                    <Description>Get 30% OFF For New Arrivals.</Description>
-                    <Button>Shop Now</Button>
-                </InfoContainer>
-            </Slide>
+            {sliderItems.map(item => (
+                <Slide bg={item.bg}>
+                  <ImgContainer>
+                      <Image src={item.img}/>
+                  </ImgContainer>
+                  <InfoContainer>
+                      <Title>{item.title}</Title>
+                      <Description>{item.desc}</Description>
+                      <Button>Shop Now</Button>
+                  </InfoContainer>
+                </Slide>
 
-            <Slide bg='fcf1ed'>
-                <ImgContainer>
-                    <Image src={Shopping}/>
-                </ImgContainer>
-                <InfoContainer>
-                    <Title>Winter Sale</Title>
-                    <Description>Get 30% OFF For New Arrivals.</Description>
-                    <Button>Shop Now</Button>
-                </InfoContainer>
-            </Slide>
+            ))}
+          
 
-            <Slide bg='fbf0f4'>
-                <ImgContainer>
-                    <Image src={Shopping}/>
-                </ImgContainer>
-                <InfoContainer>
-                    <Title>Popular Sale</Title>
-                    <Description>Get 30% OFF For New Arrivals.</Description>
-                    <Button>Shop Now</Button>
-                </InfoContainer>
-            </Slide>
         </Wrapper>
         <Arrow direction = 'right' onClick={() => handleClick('right')}>
             <KeyboardArrowRightOutlined />
