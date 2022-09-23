@@ -6,8 +6,9 @@ const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: #CBD9CE;
+    /* background-color: #CBD9CE; */
     position: relative;
+    overflow: hidden;
 `
 const Arrow = styled.div`
     width: 50px;
@@ -28,12 +29,14 @@ const Arrow = styled.div`
 `
 const Wrapper = styled.div`
     height: 100%;
+    display: flex;
 `
 const Slide = styled.div`
     display: flex;
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-color: #${props => props.bg};
 `
 const ImgContainer = styled.div`
     flex: 1;
@@ -69,12 +72,34 @@ function Slider() {
             <KeyboardArrowLeftOutlined />
         </Arrow>
         <Wrapper>
-            <Slide>
+            <Slide bg='f5fafd'>
                 <ImgContainer>
                     <Image src={Shopping}/>
                 </ImgContainer>
                 <InfoContainer>
                     <Title>Summer Sale</Title>
+                    <Description>Get 30% OFF For New Arrivals.</Description>
+                    <Button>Shop Now</Button>
+                </InfoContainer>
+            </Slide>
+
+            <Slide bg='fcf1ed'>
+                <ImgContainer>
+                    <Image src={Shopping}/>
+                </ImgContainer>
+                <InfoContainer>
+                    <Title>Winter Sale</Title>
+                    <Description>Get 30% OFF For New Arrivals.</Description>
+                    <Button>Shop Now</Button>
+                </InfoContainer>
+            </Slide>
+
+            <Slide bg='fbf0f4'>
+                <ImgContainer>
+                    <Image src={Shopping}/>
+                </ImgContainer>
+                <InfoContainer>
+                    <Title>Popular Sale</Title>
                     <Description>Get 30% OFF For New Arrivals.</Description>
                     <Button>Shop Now</Button>
                 </InfoContainer>
