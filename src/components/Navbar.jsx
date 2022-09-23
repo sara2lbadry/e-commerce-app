@@ -48,12 +48,13 @@ const Right = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-left: 25px;
 `
 
 const MenuItem = styled.div`
     font-size: 14px;
     cursor: pointer;
+    margin-left: 25px;
+
 `
 
 function Navbar() {
@@ -64,7 +65,7 @@ function Navbar() {
                 <Language>EN</Language>
                 <SearchContainer>
                     <Input/> 
-                    <Search />
+                    <Search style={{color: "gray", fontSize: 16}}/>
                 </SearchContainer>
             </Left>
             <Center><Logo>Lune.</Logo></Center>
