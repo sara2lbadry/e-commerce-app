@@ -24,10 +24,16 @@ const Info = styled.div`
     flex-direction: column;
 `
 const Title = styled.h1`
-   
+   color: white;
+   margin: 20px;
 `
 const Button = styled.button`
-    
+    border: none;
+    padding: 10px;
+    background-color: whitesmoke;
+    color: gray;
+    cursor: pointer;
+    font-weight: 500;
 `
 function CategoriesItem({item}) {
   return (
