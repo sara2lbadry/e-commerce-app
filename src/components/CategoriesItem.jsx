@@ -4,10 +4,26 @@ import styled from "styled-components"
 const Container = styled.div`
     
 `
-function CategoriesItem() {
+const Image = styled.img`
+    
+`
+const Info = styled.div`
+    
+`
+const Title = styled.h1`
+   
+`
+const Button = styled.button`
+    
+`
+function CategoriesItem({item}) {
   return (
     <Container>
-      
+        <Image src={item.img}/>
+        <Info>
+            <Title>{item.title}</Title>
+            <Button>SHOP NOW</Button>
+        </Info>
     </Container>
   )
 }
