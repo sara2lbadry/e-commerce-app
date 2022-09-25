@@ -32,7 +32,8 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    transform: translateX(0vw);
+    transition: all 1s ease;
+    transform: translateX(${props => props.slideInex * -100}vw);
 `
 const Slide = styled.div`
     display: flex;
@@ -71,14 +72,18 @@ const Button = styled.button`
 function Slider() {
     const [slideInex, setSlideIndex] = useState(0)
     const handleClick = (direction) => {
-
+        if(direction === 'left'){
+            setSlideIndex(slideInex > 0 ? slideInex - 1 : 2)
+        } else {
+            setSlideIndex(slideInex < 2 ? slideInex + 1 : 0)
+        }
     }
   return (
     <Container>
         <Arrow direction = 'left' onClick={() => handleClick('left')}>
             <KeyboardArrowLeftOutlined />
         </Arrow>
-        <Wrapper>
+        <Wrapper slideInex = {slideInex}>
             {sliderItems.map(item => (
                 <Slide bg={item.bg}>
                   <ImgContainer>
