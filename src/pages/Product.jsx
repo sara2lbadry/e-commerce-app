@@ -64,16 +64,38 @@ const FilterSizeOption = styled.option`
     
 `
 const AddContainer = styled.div`
-    
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
 `
 const AmountContainer = styled.div`
-    
+    display: flex;
+    align-items: center;
+    font-weight: 700;
 `
-const Amount = styled.option`
-    
+const Amount = styled.span`
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
 `
 const Button = styled.button`
-    
+    padding: 10px;
+    border: 2px solid teal;
+    background-color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
 `
 function Product() {
   return (
