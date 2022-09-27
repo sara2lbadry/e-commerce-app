@@ -1,3 +1,4 @@
+import { Add, Remove } from "@mui/icons-material"
 import styled from "styled-components"
 import Announcement from "../components/Announcement"
 import Footer from "../components/Footer"
@@ -34,21 +35,44 @@ const Price = styled.span`
     font-size: 20px;
 `
 const FilterContainer = styled.div`
-    
+    width: 50%;
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
 `
 const Filter = styled.div`
-    
+    display: flex;
+    align-items: center;
 `
-const FilterTitle = styled.div`
-    
+const FilterTitle = styled.span`
+    font-size: 15px;
+    font-weight: 200;
 `
 const FilterColor = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius:50%;
+    background-color: ${props => props.color};
+    margin: 0 5px;
+    cursor: pointer;
+`
+const FilterSize = styled.select`
+    margin-left: 10px;
+    padding: 5px;
+`
+const FilterSizeOption = styled.option`
     
 `
-const FilterSize = styled.div`
+const AddContainer = styled.div`
     
 `
-const FilterSizeOption = styled.div`
+const AmountContainer = styled.div`
+    
+`
+const Amount = styled.option`
+    
+`
+const Button = styled.button`
     
 `
 function Product() {
@@ -88,6 +112,14 @@ function Product() {
                         </FilterSize>
                     </Filter>
                 </FilterContainer>
+                <AddContainer>
+                    <AmountContainer>
+                        <Remove/>
+                        <Amount>1</Amount>
+                        <Add/>
+                    </AmountContainer>
+                    <Button>ADD TO CART</Button>
+                </AddContainer>
             </InfoContainer>
         </Wrapper>
         <Newsletter />
