@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Navbar from '../components/Navbar'
 import Announcement from '../components/Announcement'
 import Footer from '../components/Footer'
+import { Add, Remove } from "@mui/icons-material"
 
 const Container = styled.div`
     
@@ -82,9 +83,26 @@ const PriceDetails = styled.div`
     justify-content: center;
     flex-direction: column;
 `
+const ProductAmountContainer = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+`
+const ProductAmount = styled.div`
+    font-size: 24px;
+    margin: 5px;
+`
+const ProductPrice = styled.div`
+    font-size: 28px;
+    font-weight: 200;
+`
+
 const Summary = styled.div`
     flex: 1;
 `
+
+
 function Cart() {
   return (
     <Container>
@@ -112,7 +130,14 @@ function Cart() {
                                 <ProductSize><b>Size:</b> 38</ProductSize>
                             </Details>
                         </ProductDetails>
-                        <PriceDetails></PriceDetails>
+                        <PriceDetails>
+                            <ProductAmountContainer>
+                                <Add />
+                                <ProductAmount>2</ProductAmount>
+                                <Remove />
+                            </ProductAmountContainer>
+                            <ProductPrice>$ 25</ProductPrice>
+                        </PriceDetails>
                     </Product>
                 </Info>
                 <Summary></Summary>
