@@ -17,6 +17,7 @@ const Top = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
 `
 const TopButton = styled.button`
     padding: 10px;
@@ -36,7 +37,53 @@ const TopText = styled.span`
     margin: 0 10px;
 `
 const Bottom = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+const Info = styled.div`
+    flex: 3;
+`
+const Product = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+const ProductDetails = styled.div`
+    flex: 2;
+    display: flex;
+`
+const Image = styled.img`
+    width: 200px;
+`
+const Details = styled.div`
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`
+const ProductName = styled.span`
     
+`
+const ProductId = styled.span`
+    
+`
+const ProductColor = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: ${props => props.color};
+`
+const ProductSize = styled.span`
+    
+`
+const PriceDetails = styled.div`
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+`
+const Summary = styled.div`
+    flex: 1;
 `
 function Cart() {
   return (
@@ -53,7 +100,23 @@ function Cart() {
                 </TopTexts>
                 <TopButton type = "filled">CHECKOUT NOW</TopButton>
             </Top>
-            <Bottom></Bottom>
+            <Bottom>
+                <Info>
+                    <Product>
+                        <ProductDetails>
+                            <Image src='https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A'/>
+                            <Details>
+                                <ProductName><b>Product:</b> JISSIE THUNDER SHOES</ProductName>
+                                <ProductId><b>ID:</b> 925125369</ProductId>
+                                <ProductColor color="black"/>
+                                <ProductSize><b>Size:</b> 38</ProductSize>
+                            </Details>
+                        </ProductDetails>
+                        <PriceDetails></PriceDetails>
+                    </Product>
+                </Info>
+                <Summary></Summary>
+            </Bottom>
         </Wrapper>
         <Footer />
       
