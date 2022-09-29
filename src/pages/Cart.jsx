@@ -97,6 +97,11 @@ const ProductPrice = styled.div`
     font-size: 28px;
     font-weight: 200;
 `
+const Hr = styled.hr`
+    background-color: #eee;
+    border: none;
+    height: 2px;
+`
 
 const Summary = styled.div`
     flex: 1;
@@ -137,6 +142,26 @@ function Cart() {
                                 <Remove />
                             </ProductAmountContainer>
                             <ProductPrice>$ 25</ProductPrice>
+                        </PriceDetails>
+                    </Product>
+                    <Hr />
+                    <Product>
+                        <ProductDetails>
+                            <Image src='https://i.pinimg.com/originals/2d/af/f8/2daff8e0823e51dd752704a47d5b795c.png'/>
+                            <Details>
+                                <ProductName><b>Product:</b> HAKURA T-SHIRT</ProductName>
+                                <ProductId><b>ID:</b> 925125380</ProductId>
+                                <ProductColor color="gray"/>
+                                <ProductSize><b>Size:</b> 37</ProductSize>
+                            </Details>
+                        </ProductDetails>
+                        <PriceDetails>
+                            <ProductAmountContainer>
+                                <Add />
+                                <ProductAmount>1</ProductAmount>
+                                <Remove />
+                            </ProductAmountContainer>
+                            <ProductPrice>$ 20</ProductPrice>
                         </PriceDetails>
                     </Product>
                 </Info>
