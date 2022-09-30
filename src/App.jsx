@@ -1,8 +1,8 @@
-import Login from './pages/Login'
+import ProductList from './pages/ProductList'
 function App() {
   return (
     <div>
-        <Login />
+        <ProductList />
     </div>
   )
 }
