@@ -134,8 +134,7 @@ function Product() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                     venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
                     iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-                    tristique tortor pretium ut. Curabitur elit justo, consequat id
-                    condimentum ac, volutpat ornare.
+                    tristique tortor pretium ut. 
                 </Desc>
                 <Price>$ 30</Price>
                 <FilterContainer>
