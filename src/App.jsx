@@ -2,7 +2,6 @@ import Home from "./pages/Home"
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Routes
 } from "react-router-dom";
 import ProductList from "./pages/ProductList";
@@ -17,10 +16,10 @@ function App() {
       <Routes>
         <Route path = "/" exact element = {<Home />}></Route>
         <Route path = "/products"  element = {<ProductList />}></Route>
+        <Route path = "/products/:cat"  element = {<ProductList />}></Route>
         <Route path = "/product/:id" element = {<Product />}></Route>
         <Route path = "/cart"  element = {<Cart />}></Route>
         <Route path = "/login" element = {<Login />}></Route>
-        <Route path = "/" element = {<Home />}></Route>
         <Route path = "/regsiter" element = {<Regsiter />}></Route>
       </Routes>
     </Router>
