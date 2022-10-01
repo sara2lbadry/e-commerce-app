@@ -1,5 +1,6 @@
 import { KeyboardArrowLeftOutlined, KeyboardArrowRightOutlined } from "@mui/icons-material"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 import {sliderItems} from '../data'
 
@@ -98,7 +99,9 @@ function Slider() {
                   <InfoContainer>
                       <Title>{item.title}</Title>
                       <Description>{item.desc}</Description>
-                      <Button>Shop Now</Button>
+                      <Link className="link" to = "/products">
+                        <Button>Shop Now</Button>
+                      </Link>
                   </InfoContainer>
                 </Slide>
 

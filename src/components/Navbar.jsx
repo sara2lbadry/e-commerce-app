@@ -111,11 +111,14 @@ function Navbar() {
                 <Link className='link' to = "/login">
                     <MenuItem>SIGN IN</MenuItem>
                 </Link>
-                <MenuItem>
-                    <Badge badgeContent={4} color="secondary">
-                        <ShoppingCartOutlined  />
-                    </Badge>
-                </MenuItem>
+                <Link className='link' to = "/cart">
+                    <MenuItem>
+                        <Badge badgeContent={4} color="secondary">
+                            <ShoppingCartOutlined  />
+                        </Badge>
+                    </MenuItem>
+                </Link>
+                
             </Right>
 
         </Wrapper>
