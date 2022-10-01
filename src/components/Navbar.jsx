@@ -1,6 +1,7 @@
 import { Search, ShoppingCartOutlined } from '@mui/icons-material'
 import { Badge } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import {mobile} from '../responsive'
 const Container = styled.div`
@@ -98,10 +99,18 @@ function Navbar() {
                     <Search style={{color: "gray", fontSize: 16}}/>
                 </SearchContainer>
             </Left>
-            <Center><Logo>Lune.</Logo></Center>
+            <Center>
+                <Link className='link' to = "/">
+                    <Logo>Lune.</Logo>
+                </Link>
+            </Center>
             <Right>
-                <MenuItem>REGISTER</MenuItem>
-                <MenuItem>SIGN IN</MenuItem>
+                <Link className='link' to = "/regsiter">
+                    <MenuItem>REGISTER</MenuItem>
+                </Link>
+                <Link className='link' to = "/login">
+                    <MenuItem>SIGN IN</MenuItem>
+                </Link>
                 <MenuItem>
                     <Badge badgeContent={4} color="secondary">
                         <ShoppingCartOutlined  />
