@@ -1,10 +1,14 @@
 import IMG1 from "./assets/img1.jpg"
 import IMG2 from "./assets/top2.png"
-import IMG3 from "./assets/bag.png"
+import IMG3 from "./assets/top4.png"
 import IMG6 from "./assets/top.png"
 import IMG7 from "./assets/tshirt.png"
 import IMG8 from "./assets/tote.png"
 import IMG9 from "./assets/skirt.png"
+import IMG10 from "./assets/card.png"
+import IMG11 from "./assets/top3.png"
+import IMG12 from "./assets/dress.png"
+
 
 
 export const sliderItems = [
@@ -89,5 +93,17 @@ export const sliderItems = [
     {
       id:9,
       img:IMG9,
+    },
+    {
+      id:10,
+      img:IMG10,
+    },
+    {
+      id:11,
+      img:IMG11,
+    },
+    {
+      id:12,
+      img:IMG12,
     },
   ]
