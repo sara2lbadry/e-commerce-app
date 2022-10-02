@@ -1,7 +1,16 @@
+import IMG1 from "./assets/img1.jpg"
+import IMG2 from "./assets/top2.png"
+import IMG3 from "./assets/bag.png"
+import IMG6 from "./assets/top.png"
+import IMG7 from "./assets/tshirt.png"
+import IMG8 from "./assets/tote.png"
+import IMG9 from "./assets/skirt.png"
+
+
 export const sliderItems = [
     {
       id: 1,
-      img: "https://i.ibb.co/XsdmR2c/1.png",
+      img: IMG1,
       title: "SUMMER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "f5fafd",
@@ -50,11 +59,11 @@ export const sliderItems = [
     },
     {
       id:2,
-      img:"https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
+      img: IMG2,
     },
     {
       id:3,
-      img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+      img: IMG3,
     },
     {
       id:4,
@@ -66,14 +75,19 @@ export const sliderItems = [
     },
     {
       id:6,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
+      img:IMG6,
     },
     {
       id:7,
-      img:"https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png",
+      img: IMG7,
     },
     {
       id:8,
-      img:"https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
+      img:IMG8,
+    },
+
+    {
+      id:9,
+      img:IMG9,
     },
   ]
