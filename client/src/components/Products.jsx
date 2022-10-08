@@ -25,23 +25,47 @@ function Products({ cat, filters, sort }) {
             ? `http://localhost:5000/api/products?category=${cat}`
             : "http://localhost:5000/api/products"
         );
+        console.log(res);
         setProducts(res.data);
       } catch (error) {}
     };
     getProducts();
   }, [cat]);
 
+  // useEffect(() => {
+  //   cat &&
+  //     setFilteredProducts(
+  //       products.filter((item) =>
+  //          Object.entries(filters).every(([key, value]) =>
+  //           item[key].includes(value)
+  //         )
+  //       )
+  //     );
+
+  // }, [products, cat, filters]);
+  // useEffect(() => {
+  //   cat &&
+  //     setFilteredProducts(
+  //       products.filter((item) =>
+  //         Object.entries(filters).every(([key, value]) =>
+  //           item[key] === value
+  //         )
+  //       )
+  //     );
+  // }, [products, cat, filters]);
+  // console.log(filteredProducts);
+
   useEffect(() => {
     cat &&
       setFilteredProducts(
-        products.filter((item) =>
-          Object.entries(filters).every(([key, value]) =>
-            item[key].includes(value)
-          )
-        )
+        products.filter((item) => {
+          return Object.entries(filters).every(([key, value]) => {
+            return item[key].includes(value);
+          });
+        })
       );
+    console.log(filteredProducts);
   }, [products, cat, filters]);
-  console.log(filteredProducts)
 
   return (
     <Container>
