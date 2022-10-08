@@ -1,4 +1,6 @@
-import IMG1 from "./assets/img1.jpg"
+import Img from "./assets/img1.png"
+import Img1 from "./assets/img2.png"
+import CAT3 from "./assets/cat1.jpg"
 import IMG2 from "./assets/top2.png"
 import IMG3 from "./assets/top4.png"
 import IMG6 from "./assets/top.png"
@@ -14,17 +16,17 @@ import IMG12 from "./assets/dress.png"
 export const sliderItems = [
     {
       id: 1,
-      img: IMG1,
+      img: Img,
       title: "SUMMER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "f5fafd",
     },
     {
       id: 2,
-      img: "https://i.ibb.co/DG69bQ4/2.png",
+      img: Img1,
       title: "AUTUMN COLLECTION",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fcf1ed",
+      bg: "dedfe1",
     },
     {
       id: 3,
@@ -38,7 +40,7 @@ export const sliderItems = [
   export const categories = [
     {
       id: 1,
-      img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: CAT3,
       title: "SHIRT STYLE!",
       cat: "women"
     },
@@ -50,7 +52,7 @@ export const sliderItems = [
     },
     {
       id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      img: CAT3,
       title: "LIGHT JACKETS",
       cat: "jeans"
     },
