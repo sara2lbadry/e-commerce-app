@@ -25,15 +25,27 @@ function Products({ cat, filters, sort }) {
             ? `http://localhost:5000/api/products?category=${cat}`
             : "http://localhost:5000/api/products"
         );
-        setProducts(res.data)
+        setProducts(res.data);
       } catch (error) {}
     };
     getProducts();
   }, [cat]);
 
+  useEffect(() => {
+    cat &&
+      setFilteredProducts(
+        products.filter((item) =>
+          Object.entries(filters).every(([key, value]) =>
+            item[key].includes(value)
+          )
+        )
+      );
+  }, [products, cat, filters]);
+  console.log(filteredProducts)
+
   return (
     <Container>
-      {popularProducts.map((item) => (
+      {filteredProducts.map((item) => (
         <Product item={item} key={item.id} />
       ))}
     </Container>
