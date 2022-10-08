@@ -47,13 +47,13 @@ const Option = styled.option``;
 function ProductList() {
   const location = useLocation();
   const cat = location.pathname.split("/")[2];
-  const [filter, setFilters] = useState({});
+  const [filters, setFilters] = useState({});
   const [sort, setSort] = useState("newest");
 
   const handleFilters = (event) => {
     const value = event.target.value;
     setFilters({
-      ...filter,
+      ...filters,
       [event.target.name]: value,
     });
   };
@@ -95,7 +95,7 @@ function ProductList() {
           </Select>
         </Filter>
       </FilterContainer>
-      <Products />
+      <Products cat = {cat} filters = {filters} sort = {sort}/>
       <Newsletter />
       <Footer />
     </Container>
