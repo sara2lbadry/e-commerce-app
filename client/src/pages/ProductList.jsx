@@ -72,8 +72,7 @@ function ProductList() {
             <Option>Black</Option>
             <Option>Brown</Option>
             <Option>Blue</Option>
-            <Option>Pruple</Option>
-            <Option>Yellow</Option>
+            <Option>Pink</Option>
             <Option>Green</Option>
           </Select>
           <Select name="size" onChange={handleFilters}>
