@@ -70,8 +70,9 @@ function ProductList() {
             <Option disabled>Color</Option>
             <Option>White</Option>
             <Option>Black</Option>
-            <Option>Red</Option>
+            <Option>Brown</Option>
             <Option>Blue</Option>
+            <Option>Pruple</Option>
             <Option>Yellow</Option>
             <Option>Green</Option>
           </Select>
