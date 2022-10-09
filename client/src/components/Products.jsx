@@ -32,7 +32,6 @@ function Products({ cat, filters, sort }) {
     getProducts();
   }, [cat]);
 
-  
   // useEffect(() => {
   //   cat &&
   //     setFilteredProducts(
@@ -54,8 +53,23 @@ function Products({ cat, filters, sort }) {
           });
         })
       );
-    console.log(filteredProducts);
   }, [products, cat, filters]);
+
+  useEffect(() => {
+    if (sort === "newest") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => a.createdAt - b.createdAt)
+      );
+    } else if (sort === "asc") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => a.price - b.price)
+      );
+    } else {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => b.price - a.price)
+      );
+    }
+  }, [sort]);
 
   return (
     <Container>
