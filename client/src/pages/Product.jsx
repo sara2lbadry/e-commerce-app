@@ -7,6 +7,8 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
+import { addProduct } from "../redux/reduxCart";
+import { useDispatch } from "react-redux";
 import { publicRequest } from "../requestMethods";
 import { mobile } from "../responsive";
 
@@ -127,6 +129,7 @@ function Product() {
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
+  const dispatch = useDispatch()
 
 
   useEffect(() => {
@@ -146,6 +149,12 @@ function Product() {
       setQuantity(quantity + 1);
     }
   };
+
+  const handleClick = () => {
+    //Update cart
+    dispatch(addProduct({product, quantity}))
+    addProduct({product, quantity})
+  }
   return (
     <Container>
       <Navbar />
@@ -180,7 +189,7 @@ function Product() {
               <Amount>{quantity}</Amount>
               <Add onClick={() => handleQuantity("inc")} />
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
