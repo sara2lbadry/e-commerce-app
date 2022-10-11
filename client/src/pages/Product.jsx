@@ -129,8 +129,7 @@ function Product() {
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
-  const dispatch = useDispatch()
-
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const getProduct = async () => {
@@ -152,9 +151,10 @@ function Product() {
 
   const handleClick = () => {
     //Update cart
-    dispatch(addProduct({product, quantity}))
-    addProduct({product, quantity})
-  }
+    dispatch(
+      addProduct({ ...product, quantity, color, size })
+    );
+  };
   return (
     <Container>
       <Navbar />
@@ -171,7 +171,7 @@ function Product() {
             <Filter>
               <FilterTitle>Color</FilterTitle>
               {product.color?.map((c) => (
-                <FilterColor color={c} key={c} onClick={() =>setColor(c)}/>
+                <FilterColor color={c} key={c} onClick={() => setColor(c)} />
               ))}
             </Filter>
             <Filter>
