@@ -82,6 +82,7 @@ const ProductId = styled.span``;
 const ProductColor = styled.div`
   width: 20px;
   height: 20px;
+  border: 1px solid gray;
   border-radius: 50%;
   background-color: ${(props) => props.color};
 `;
@@ -158,7 +159,7 @@ function Cart() {
         <Top>
           <TopButton>CONTINUE SHOPPING</TopButton>
           <TopTexts>
-            <TopText>Shopping Bag (2)</TopText>
+            <TopText>Shopping Bag ({cart.quantity})</TopText>
             <TopText>Your Wishlist</TopText>
           </TopTexts>
           <TopButton type="filled">CHECKOUT NOW</TopButton>

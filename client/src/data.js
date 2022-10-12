@@ -42,7 +42,7 @@ export const sliderItems = [
       id: 1,
       img: CAT3,
       title: "SHIRT STYLE!",
-      cat: "women"
+      cat: "shirts"
     },
     {
       id: 2,
