@@ -1,5 +1,6 @@
 import Img from "./assets/img1.png"
 import Img1 from "./assets/img2.png"
+import Img2 from "./assets/img3.png"
 import IMG2 from "./assets/top2.png"
 import IMG3 from "./assets/top4.png"
 import IMG6 from "./assets/top.png"
@@ -18,24 +19,24 @@ import CAT3 from "./assets/trend.jpg"
 export const sliderItems = [
     {
       id: 1,
-      img: Img,
+      img: Img1,
       title: "SUMMER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "f5fafd",
+      bg: "e3e6d9",
     },
     {
       id: 2,
-      img: Img1,
+      img: Img,
       title: "AUTUMN COLLECTION",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "dedfe1",
+      bg: "e8e5dd",
     },
     {
       id: 3,
-      img: "https://i.ibb.co/cXFnLLV/3.png",
+      img: Img2,
       title: "LOUNGEWEAR LOVE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fbf0f4",
+      bg: "d9e2ee",
     },
   ];
 
@@ -56,7 +57,7 @@ export const sliderItems = [
       id: 3,
       img: CAT3,
       title: "TRENDY STYLES!",
-      cat: "jeans"
+      cat: "trendy"
     },
   ];
 
