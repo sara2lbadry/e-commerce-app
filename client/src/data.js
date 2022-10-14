@@ -1,6 +1,5 @@
 import Img from "./assets/img1.png"
 import Img1 from "./assets/img2.png"
-import CAT3 from "./assets/cat1.jpg"
 import IMG2 from "./assets/top2.png"
 import IMG3 from "./assets/top4.png"
 import IMG6 from "./assets/top.png"
@@ -10,6 +9,9 @@ import IMG9 from "./assets/skirt.png"
 import IMG10 from "./assets/card.png"
 import IMG11 from "./assets/top3.png"
 import IMG12 from "./assets/dress.png"
+import CAT1 from "./assets/catdress.jpg"
+import CAT2 from "./assets/catbags.jpg"
+import CAT3 from "./assets/trend.jpg"
 
 
 
@@ -40,20 +42,20 @@ export const sliderItems = [
   export const categories = [
     {
       id: 1,
-      img: CAT3,
-      title: "SHIRT STYLE!",
-      cat: "shirts"
+      img: CAT1,
+      title: "DRESSES STYLE!",
+      cat: "dresses"
     },
     {
       id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "LOUNGEWEAR LOVE",
+      img: CAT2,
+      title: "BAGS COLLECTION!",
       cat: "bags"
     },
     {
       id: 3,
       img: CAT3,
-      title: "LIGHT JACKETS",
+      title: "TRENDY STYLES!",
       cat: "jeans"
     },
   ];
