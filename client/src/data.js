@@ -1,5 +1,5 @@
 import Img from "./assets/img1.png"
-import Img1 from "./assets/img2.png"
+import Img1 from "./assets/1.png"
 import Img2 from "./assets/img3.png"
 import IMG2 from "./assets/top2.png"
 import IMG3 from "./assets/top4.png"
@@ -22,21 +22,21 @@ export const sliderItems = [
       img: Img1,
       title: "SUMMER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "e3e6d9",
+      bg: "EBECE8",
     },
     {
       id: 2,
       img: Img,
       title: "AUTUMN COLLECTION",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "e8e5dd",
+      bg: "cfdcdf",
     },
     {
       id: 3,
       img: Img2,
       title: "LOUNGEWEAR LOVE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "d9e2ee",
+      bg: "e7e8eb",
     },
   ];
 
