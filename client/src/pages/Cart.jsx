@@ -4,8 +4,6 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import { Add, Remove } from "@mui/icons-material";
 import { mobile } from "../responsive";
-import IMG1 from "../assets/pink.png";
-import IMG2 from "../assets/short.png";
 import { useSelector } from "react-redux";
 
 const Container = styled.div``;

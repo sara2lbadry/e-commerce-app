@@ -69,14 +69,14 @@ const Error = styled.span`
 `;
 
 function Login() {
-  const [userName, setUserName] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const { isFetching, error } = useSelector((state) => state.user);
 
   const handleClick = (e) => {
     e.preventDefault();
-    login(dispatch, { userName, password });
+    login(dispatch, { username, password });
   };
   return (
     <Container>
@@ -85,7 +85,7 @@ function Login() {
         <Form>
           <Input
             placeholder="Username"
-            onChange={(e) => setUserName(e.target.value)}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <Input
             placeholder="Password"
