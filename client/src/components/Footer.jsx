@@ -4,30 +4,36 @@ import { mobile } from "../responsive"
 
 const Container = styled.div`
     display: flex;
+    background-color: #183153;
+    color: white;
+    padding-top: 1.1rem;
 
     ${mobile({
         flexDirection:"column"
     })}
 `
 const Logo = styled.h1`
+    font-size: 1.8rem;
     
 `
 const Desc = styled.p`
     margin: 20px 0px;
+    font-size: 1rem;
+    line-height: 24px;
 `
 const SocialContainer = styled.div`
     display: flex;
 `
 const SocialIcon = styled.div`
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    color: whitesmoke;
+    color: #c3c6d1;
     background-color: #${props => props.color};
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
+    margin-right: 15px;
 `
 const Left = styled.div`
     flex: 1;
@@ -72,7 +78,7 @@ const ContactItem = styled.div`
 `
 
 const Payment = styled.img`
-    width: 50%;
+    width: 30%;
 `
 
 function Footer() {
@@ -86,16 +92,16 @@ function Footer() {
                 fugiat, nam enim tenetur assumenda!
             </Desc>
             <SocialContainer>
-                <SocialIcon color="3B5999">
+                <SocialIcon color="183153">
                     <Facebook />
                 </SocialIcon>
-                <SocialIcon color="E4405F">
+                <SocialIcon color="183153">
                     <Instagram />
                 </SocialIcon>
-                <SocialIcon color="55ACEE">
+                <SocialIcon color="183153">
                     <Twitter />
                 </SocialIcon>
-                <SocialIcon color="E60023">
+                <SocialIcon color="183153">
                     <Pinterest />
                 </SocialIcon>
             </SocialContainer>
@@ -118,15 +124,15 @@ function Footer() {
         <Right>
             <Title>Contact</Title>
             <ContactItem>
-                <LocationOn style={{marginRight: "10px"}}/>
+                <LocationOn style={{marginRight: "10px", color: "#c3c6d1"}}/>
                 622 lorm ipsum, South 38622
             </ContactItem>
             <ContactItem>
-                <Phone style={{marginRight: "10px"}}/>
+                <Phone style={{marginRight: "10px" , color: "#c3c6d1"}}/>
                 +1 234 56 789
             </ContactItem>
             <ContactItem>
-                <MailOutline style={{marginRight: "10px"}}/>
+                <MailOutline style={{marginRight: "10px" , color: "#c3c6d1"}}/>
                 contact@lune.dev
             </ContactItem>
             <Payment  src="https://i.ibb.co/Qfvn4z6/payment.png"/>
