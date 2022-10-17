@@ -1,10 +1,9 @@
-import { Send } from "@mui/icons-material"
 import styled from "styled-components"
 import {mobile} from "../responsive"
 
 const Container = styled.div`
     height: 70vh;
-    background-color: #fcf5f5;
+    background-color: #f0f1f3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,10 +12,12 @@ const Container = styled.div`
 const Title = styled.h1`
     font-size: 60px;
     margin-bottom: 20px;
+    color: #183153;
 `
 const Description = styled.div`
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(95 105 125);
     margin-bottom: 20px;
 
     ${mobile({
@@ -24,27 +25,43 @@ const Description = styled.div`
     })}
 `
 const InputContainer = styled.div`
-    width: 50%;
-    height: 40px;
-    background-color: white;
+    
     display: flex;
-    justify-content: space-between;
-    border: 1px solid lightgray;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     ${mobile({
         width:"80%"
     })}
 `
 const Input = styled.input`
-    border: none;
     flex: 8;
-    padding-left: 20px;
+    padding: 15px 40px; 
+    margin-bottom: 15px;
+    border: 1px solid lightgray;
+    width: 100%;
+    border-radius: 0.4rem;
+
 `
 const Button = styled.button`
     flex: 1;
     border: none;
-    background-color: teal;
-    color: whitesmoke;
+    background: transparent;
+    color: #183153;
+    padding: 0.6rem 1.4rem;
+    width: fit-content;
+    border: 2px solid #1f252b;
+    border-radius: 0.9rem;
+    color: #183153;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover{
+        padding: 0.6rem 1.6rem;
+        
+    }
+
 `
 function Newsletter() {
   return (
@@ -54,7 +71,7 @@ function Newsletter() {
         <InputContainer>
             <Input placeholder = "Your email"/>
             <Button>
-                <Send></Send>
+                Submit
             </Button>
         </InputContainer>
     </Container>
