@@ -22,18 +22,25 @@ const Text = styled.div`
   align-items: center;
   width: 90%;
   margin: 0 auto;
+  color: rgb(20 110 190);
 `;
 const Featured = styled.span`
   font-size: 14px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
+
 `;
 const Browse = styled.span`
   display: flex;
   align-items: center;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
+
+  &:hover {
+    color: #74c0fc;
+
+  }
 `;
 function Products({ cat, filters, sort }) {
   const [products, setProducts] = useState([]);
