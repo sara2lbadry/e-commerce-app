@@ -13,7 +13,8 @@ import Regsiter from "./pages/Register"
 import { useSelector } from "react-redux";
 
 function App() {
-  const user = useSelector(state => state.user.currentUser)
+  // const user = useSelector(state => state.user.currentUser) 
+  const user = true
   return (
     <Router>
       <Routes>
