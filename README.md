@@ -5,9 +5,20 @@ Lune is a fully responsive e-commerce website, built using MERN stack.
 
 - Register or login as an existing user.
 - Applying filters to search products.
-- Adding products to the shopping cart
+- Adding products to the shopping cart.
 - Changing the required amount of for products.
 - Checking order summary.
+
+## Technologies Used
+
+- React.js.
+- Redux.
+- Styled-Components.
+- Node.js
+- Express.js.
+- MongoDB.
+- REST API.
+
 
 ## Screenshots 
 ![Demo image](./client/src/assets/Group.png)
